@@ -2,25 +2,33 @@ package com.clearminds.jmp.dtos;
 
 public class Estudiante {	
 	
+	private int id;
+	
 	private String nombre;
 	
-	private String apellido;
-	
-	private int numero;
-
-	public Estudiante(String nombre, String apellido, int numero) {
-		super();
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.numero = numero;
-	}
+	private String apellido;	
 
 	public Estudiante(String nombre, String apellido) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
-	}	
-	
+	}
+
+	public Estudiante(int id, String nombre, String apellido) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -37,18 +45,13 @@ public class Estudiante {
 		this.apellido = apellido;
 	}
 
-	public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
 	@Override
 	public String toString() {
-		return "Estudiante [nombre=" + nombre + ", apellido=" + apellido + ", numero=" + numero + "]";
+		return "Estudiante [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + "]";
 	}
+	
+	
+
 	
 	
 		

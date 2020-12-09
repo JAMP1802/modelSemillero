@@ -7,6 +7,10 @@ public class Estudiante {
 	private String nombre;
 	
 	private String apellido;	
+	
+	public Estudiante() {
+		
+	}
 
 	public Estudiante(String nombre, String apellido) {
 		super();

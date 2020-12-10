@@ -1,5 +1,6 @@
 package com.clearminds.jmp.dtos;
 
+
 public class Estudiante {	
 	
 	private int id;
@@ -9,6 +10,8 @@ public class Estudiante {
 	private String apellido;	
 	
 	private int edad;
+	
+	private String fechaModificacion;
 	
 	public Estudiante() {
 		
@@ -27,12 +30,13 @@ public class Estudiante {
 		this.apellido = apellido;
 	}	
 
-	public Estudiante(int id, String nombre, String apellido, int edad) {
+	public Estudiante(int id, String nombre, String apellido, int edad, String fechaModificacion) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.edad = edad;
+		this.fechaModificacion = fechaModificacion;
 	}
 
 	public int getId() {
@@ -67,10 +71,20 @@ public class Estudiante {
 		this.edad = edad;
 	}
 
+	public String getFechaModificacion() {
+		return fechaModificacion;
+	}
+
+	public void setFechaModificacion(String fechaModificacion) {
+		this.fechaModificacion = fechaModificacion;
+	}
+
 	@Override
 	public String toString() {
-		return "Estudiante [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+		return "Estudiante [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad
+				+ ", fechaModificacion=" + fechaModificacion + "]";
 	}
+
 	
 	
 
